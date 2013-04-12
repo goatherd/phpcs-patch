@@ -1,0 +1,16 @@
+{
+    "name": "goatherd/phpcs-patch",
+    "description": "Extension to php_codesniffer",
+    "type": "patch",
+    "require": {
+        "squizlabs/php_codesniffer": "1.5.*",
+        "goatherd/patch-installer": "*"
+    },
+    "extra": {
+        "patch-path": "squizlabs/php_codesniffer",
+        "patch-files": [
+            "CodeSniffer.php",
+            "CodeSniffer/File.php"
+        ]
+    }
+}
