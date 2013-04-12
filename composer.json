@@ -3,7 +3,7 @@
     "description": "Extension to php_codesniffer",
     "type": "patch",
     "require": {
-        "squizlabs/php_codesniffer": "1.5.*",
+        "squizlabs/php_codesniffer": ">=1.4.0",
         "goatherd/patch-installer": "*"
     },
     "extra": {
