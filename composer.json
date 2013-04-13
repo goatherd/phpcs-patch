@@ -10,7 +10,8 @@
         "patch-path": "squizlabs/php_codesniffer",
         "patch-files": [
             "CodeSniffer.php",
-            "CodeSniffer/File.php"
+            "CodeSniffer/File.php",
+            "CodeSniffer/Standards/Generic/Sniffs/Functions/CallTimePassByReferenceSniff.php"
         ]
     }
 }
