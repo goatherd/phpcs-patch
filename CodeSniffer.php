@@ -656,10 +656,9 @@ class PHP_CodeSniffer
         $bootstrapFn = self::$standardDir . DIRECTORY_SEPARATOR . 'bootstrap.php';
         // Override with ruleset 'bootstrap' key.
         if (isset($ruleset) && isset($ruleset['bootstrap'])) {
-            if (substr($ruleset['bootstrap'], 0, 1) == DIRECTORY_SEPARATOR) {
-                $bootstrapFn = $ruleset['bootstrap'];
-            } else {
-                $bootstrapFn = self::$standardDir . DIRECTORY_SEPARATOR . $ruleset['bootstrap'];
+            $bootstrapFn = str_replace('/', DIRECTORY_SEPARATOR, $ruleset['bootstrap']);
+            if (substr($bootstrapFn, 0, 1) !== DIRECTORY_SEPARATOR) {
+                $bootstrapFn = self::$standardDir . DIRECTORY_SEPARATOR . $bootstrapFn;
             }
         }
         // load if name is a valid file name
