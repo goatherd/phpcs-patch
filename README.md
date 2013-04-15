@@ -1,11 +1,13 @@
 phpcs-patch
 ===========
 
-Composer package for php_codesniffer patching.
+[php_codesniffer](https://github.com/squizlabs/PHP_CodeSniffer) patch.
 
 Features
 --------
 
-* stable PHP_CodeSniffer (may not be the most recent)
+* PHP_CodeSniffer 1.5.0RC2
 * namespace support
-* allow symlinked standards/ sniffs
+* support symlinked standards/ sniffs
+* allow standard bootstrapping by optional `bootstrap.php` or rulesets `<bootstrap>path/to/bootstrap.php</bootstrap>`.
+  Path resolution is relative to (real) standard directory.
